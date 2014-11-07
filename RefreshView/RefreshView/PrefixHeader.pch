@@ -1,0 +1,48 @@
+//
+//  PrefixHeader.pch
+//  RefreshView
+//
+//  Created by je_ffy on 14/11/4.
+//  Copyright (c) 2014年 je_ffy. All rights reserved.
+//
+#ifndef RefreshView_PrefixHeader_pch
+#define RefreshView_PrefixHeader_pch
+
+typedef enum {
+    NextPageViewState_Loaded = 0,
+    NextPageViewState_Loading,
+    NextPageViewState_Faild,
+    NextPageViewState_NoMore,
+    NextPageViewState_Hidden,
+    NextPageViewState_UnHidden
+    
+} NextPageViewState;
+
+
+typedef enum {
+    PullRefreshState_Pulling = 0,
+    PullRefreshState_Normal,
+    PullRefreshState_Loading,
+    
+}PullRefreshState;
+
+#define RELEASE_SAFETY(__POINTER)  {if (__POINTER) {[__POINTER release];__POINTER = nil;} }
+
+
+#define END_DRUATION    (-65.0f)
+#define SCROLL_D_VALUE  (20.0f)
+
+#define TAR_DRUATION    (END_DRUATION + SCROLL_D_VALUE)
+
+#define MAX_PI_D_VALUE  (5.5)
+#define MAX_PI      (- M_PI_2 + MAX_PI_D_VALUE)
+
+#define REFRESH_CIRCLE_RADIUS      (8.0f)
+#define REFRESH_CIRCLE_VIEW_RADIUS (REFRESH_CIRCLE_RADIUS + 4.0f)
+#define REFRESH_CIRCLE_VIEW_FRAME       (CGRectMake(320.0f/2.0f - REFRESH_CIRCLE_VIEW_RADIUS, SCROLL_D_VALUE - 3.0f, REFRESH_CIRCLE_VIEW_RADIUS*2, REFRESH_CIRCLE_VIEW_RADIUS*2))
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define IOS_7_OR_LATER  ([[[UIDevice currentDevice] systemVersion] floatValue]>7.0f ? YES : NO)
+
+#endif
