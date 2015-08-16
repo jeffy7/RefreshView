@@ -18,7 +18,6 @@
 }
 @property (nonatomic, assign)  int numberOfRow;
 @property (nonatomic, assign) int currentPage;
-@property (nonatomic, retain) ViewController *VC;
 
 
 @end

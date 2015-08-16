@@ -23,7 +23,6 @@
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
     FirstView *firstView = [[FirstView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
-    firstView.VC = self;
     [self.view addSubview:firstView];
     
 
